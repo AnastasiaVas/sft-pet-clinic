@@ -1,9 +1,8 @@
 package guru.springframework.sftpetclinic.bootstrap;
 
+import guru.springframework.sftpetclinic.model.Owner;
 import guru.springframework.sftpetclinic.services.OwnerService;
 import guru.springframework.sftpetclinic.services.VetService;
-import guru.springframework.sftpetclinic.services.map.OwnerServiceMap;
-import guru.springframework.sftpetclinic.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -21,5 +20,11 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) {
 
+        Owner owner1 = new Owner();
+        owner1.setId(1L);
+        owner1.setFirstName("Nastya");
+        owner1.setLastName("Vasilyeva");
+
+        ownerService.save(owner1);
     }
 }
