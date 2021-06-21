@@ -1,14 +1,15 @@
 package guru.springframework.sftpetclinic.services.springdatajpja;
 
-import guru.springframework.sftpetclinic.model.Owner;
 import guru.springframework.sftpetclinic.model.Vet;
 import guru.springframework.sftpetclinic.repositories.VetRepository;
 import guru.springframework.sftpetclinic.services.VetService;
 import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Service
 @Profile("springdatajpa")
 public class VetSDJpaService implements VetService {
 
